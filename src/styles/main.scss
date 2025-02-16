@@ -5,6 +5,7 @@
 @use './available-devices.scss';
 @use './faq';
 @use './footer';
+@use './header';
 
 
 @font-face {
@@ -23,6 +24,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -60,17 +62,46 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: $corTextoSecundario;
-    background-color: #6421ff;
+    background-color: $corBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid $corBotaoPrimario;
+
+    &:hover {
+        background-color: lighten($color: $corBotaoPrimario, $amount: 3%);
+    }
+
+    &--secondary {
+        background-color: $corBotaoSecundario;
+        border-color: $corBotaoSecundario;
+
+        &:hover {
+            background-color: lighten($color: $corBotaoSecundario, $amount: 3%);
+        }
+    }
+
+    &--dark {
+        background-color: $corBotaoDark;
+        border-color: $corTextoSecundario;
+        transition: background-color, 0.5s ease;
+
+        &:hover {
+            background-color: $corTextoSecundario;
+            color: $corDeFundo;
+            transition: background-color, 0.5s ease;
+        }
+    }
 }
 
 .image_text_section {

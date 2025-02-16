@@ -1,6 +1,9 @@
 $corDeFundo: #040714;
 $corTextoPrincipal: silver;
 $corTextoSecundario: #f9f9f9;
+$corBotaoPrimario: #6421ff;
+$corBotaoSecundario: #0063e5;
+$corBotaoDark: rgba(0, 0, 0, 0.8);
 
 @mixin text($font-size: 16px) {
     font-size: $font-size;
